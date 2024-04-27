@@ -1,0 +1,81 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 1em;
+}
+
+.calendar {
+	width: 90%;
+	table-layout: fixed;
+}
+
+th {
+	text-align: center;
+	font-size: 14px;
+}
+
+.day-cell {
+	height: 12px;
+	line-height: 1.3em;
+	font-size: 14px;
+	border-width: 1px;
+	border-color: gray;
+}
+
+.today {
+	background-color: #78ff9c;
+}
+
+.national-holiday {
+	background-color: #cccccc;
+}
+
+.holiday {
+	background-color: #e0e0e0;
+}
+
+.weekend {
+	background-color: #ededed;
+}
+
+.weekday {
+	font-weight: bold;
+	float: left;
+	font-size: 14px;
+	padding-left: 0.5em;
+	width: 7px;
+}
+
+.day {
+	vertical-align: top;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 0em 0.5em 0em 1.8em;
+	min-width: 80px;
+}
+
+.week-number {
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 14px;
+	padding-right: 6px;
+	float: right;
+}
+
+.holiday-name {
+	font-weight: 500;
+	font-size: 12px;
+	padding-right: 1px;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em;
+}
+
+button {
+	padding: 0.5em 1em;
+}

@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# 📅 Holiday Calender
+## Internship Challenge @ Tech Chapter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
 
-## Available Scripts
+[Live Preview]()
 
-In the project directory, you can run:
+## Challenge
 
-### `npm start`
+#### Background
+For the Tech Chapter timeregistration we need to notify employees if they forget to do their time registration. However, holidays are days off why they do not need to fill in their hours.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Hint:**
+Holidays are a national mater not supported by moment.js, date-fns or Luxon, typically used for Calendar functionality within NodeJs and TypeScript. Especially the easter can cause issues, since the days will vary from one year to the next based on the moon cycle. Also Maundy Thursday is a Holiday in Denmark but not in other countries like Sweden. Salling Group, that runs a large number of supermarkets has exposed an [API](https://developer.sallinggroup.com/api-reference#apis-holidays) of Danish holidays that may help you in succeeding this task. You will need to sign up for a token before you can start the integration.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Userstory 1
+**AS AN** employee  
+**I WANT** an calendar overview of holidays within a date range
+**SO THAT** I can better plan my upcoming holiday.
 
-### `npm test`
+#### Accept criteria
+**Scenario: Holiday**
+**GIVEN** a period from January 1st 2024 to June 30th 2024
+**WHEN** displaying calendar overview
+**THEN** mark January 1 as New Years day
+**AND** mark March 28 as Maundy Thursday
+**AND** mark March 29 as Good Friday
+**AND** mark March 31 as Easter Sunday
+**AND** mark April 1 as Easter Monday
+**AND** mark May 9 as Ascension Day
+**AND** mark May 19 as Whit Sunday
+**AND** mark May 20 as Whit Monday
+**AND** mark June 5 as Constitution Day
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*From [Tech Chapter - Intern Challenge](https://github.com/techchapter/interns-challenge?tab=readme-ov-file)*
 
-### `npm run build`
+## Environment Variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project, you will need to add the following environment variable to your .env file in the server folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`SALLING_API_TOKEN`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Show holidays in Denmark (Retrieved from [Salling API](https://developer.sallinggroup.com/api-reference#apis-holidays))
+- Shows days for the first half of the year
+- Shows current day highlighted
+- Shows week numbers
+- Pagination (Go the next or previous years)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Holiday Calender](https://i.imgur.com/OWRQ2rB.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Author
+- [@sami0880-kea](https://www.github.com/sami0880-kea)
