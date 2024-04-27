@@ -9,13 +9,13 @@ const PORT = process.env.PORT ?? 8080;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.resolve('../client/build')));
+app.use(express.static(path.resolve('./build')));
 
 // Routers
 app.use(holidayRouter);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve('../client/build/index.html'))
+    res.sendFile(path.resolve('./build/index.html'))
 });
 
 app.listen(PORT, () => console.log("Server running on port", PORT));
